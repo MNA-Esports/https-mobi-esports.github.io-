@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -62,16 +61,19 @@
             --max: 1180px;
         }
 
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
+
         html {
             scroll-behavior: smooth;
             scroll-padding-top: 90px;
         }
+
 
         body {
             font-family:
@@ -97,25 +99,39 @@
             overflow-x: hidden;
         }
 
+
         body::before {
             content: "";
+
             position: fixed;
             inset: 0;
+
             pointer-events: none;
             z-index: -1;
+
             opacity: .028;
 
             background-image:
-                linear-gradient(rgba(255,255,255,.7) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(255,255,255,.7) 1px, transparent 1px);
+                linear-gradient(
+                    rgba(255,255,255,.7) 1px,
+                    transparent 1px
+                ),
+                linear-gradient(
+                    90deg,
+                    rgba(255,255,255,.7) 1px,
+                    transparent 1px
+                );
 
             background-size: 50px 50px;
         }
 
+
         body::after {
             content: "";
+
             position: fixed;
             inset: 0;
+
             pointer-events: none;
             z-index: 9998;
 
@@ -127,14 +143,17 @@
                 );
         }
 
+
         ::selection {
             background: var(--gold);
             color: #080808;
         }
 
+
         a {
             color: inherit;
         }
+
 
         button,
         input {
@@ -149,6 +168,7 @@
         .gold-text {
             color: var(--gold);
         }
+
 
         .container {
             width: min(var(--max), 90%);
@@ -168,25 +188,31 @@
             height: 78px;
 
             background: rgba(5,6,8,.78);
+
             backdrop-filter: blur(22px);
             -webkit-backdrop-filter: blur(22px);
 
             border-bottom: 1px solid var(--line);
 
             display: flex;
+
             align-items: center;
             justify-content: space-between;
 
             padding: 0 5%;
         }
 
+
         .brand {
             display: flex;
+
             align-items: center;
+
             gap: 12px;
 
             text-decoration: none;
         }
+
 
         .brand-logo {
             width: 44px;
@@ -195,6 +221,7 @@
             position: relative;
 
             display: flex;
+
             align-items: center;
             justify-content: center;
 
@@ -209,6 +236,7 @@
             color: #090a0b;
 
             font-size: 21px;
+
             font-weight: 1000;
             font-style: italic;
 
@@ -228,6 +256,7 @@
                 inset 0 1px rgba(255,255,255,.7);
         }
 
+
         .brand-logo::before {
             content: "";
 
@@ -239,40 +268,54 @@
             clip-path: inherit;
         }
 
+
         .brand-name {
             font-size: 18px;
+
             font-weight: 950;
+
             letter-spacing: 2px;
+
             white-space: nowrap;
         }
+
 
         .brand-name span {
             color: var(--gold);
         }
 
+
         .nav-links {
             display: flex;
+
             align-items: center;
+
             gap: 28px;
         }
+
 
         .nav-links a {
             position: relative;
 
             color: #aeb4ba;
+
             text-decoration: none;
 
             font-size: 11px;
+
             font-weight: 800;
+
             letter-spacing: 1.5px;
 
             transition: .25s ease;
         }
 
+
         .nav-links a::after {
             content: "";
 
             position: absolute;
+
             left: 0;
             bottom: -8px;
 
@@ -284,18 +327,22 @@
             transition: .25s ease;
         }
 
+
         .nav-links a:hover {
             color: white;
         }
+
 
         .nav-links a:hover::after {
             width: 100%;
         }
 
+
         .nav-register {
             padding: 10px 17px;
 
             border: 1px solid rgba(224,182,91,.40);
+
             border-radius: 7px;
 
             color: var(--gold-light) !important;
@@ -303,9 +350,11 @@
             background: rgba(224,182,91,.055);
         }
 
+
         .nav-register::after {
             display: none;
         }
+
 
         .menu-btn {
             display: none;
@@ -314,12 +363,15 @@
             height: 42px;
 
             border: 1px solid var(--line);
+
             border-radius: 9px;
 
             background: var(--panel);
+
             color: white;
 
             cursor: pointer;
+
             font-size: 21px;
         }
 
@@ -333,9 +385,11 @@
             min-height: 700px;
 
             position: relative;
+
             overflow: hidden;
 
             display: flex;
+
             align-items: center;
             justify-content: center;
 
@@ -343,6 +397,7 @@
 
             padding: 100px 20px;
         }
+
 
         .hero::before {
             content: "";
@@ -359,6 +414,7 @@
             animation: heroRotate 35s linear infinite;
         }
 
+
         .hero::after {
             content: "";
 
@@ -372,7 +428,9 @@
             border-radius: 50%;
         }
 
+
         @keyframes heroRotate {
+
             from {
                 transform: rotate(0deg);
             }
@@ -380,7 +438,9 @@
             to {
                 transform: rotate(360deg);
             }
+
         }
+
 
         .hero-glow {
             position: absolute;
@@ -395,21 +455,27 @@
             border-radius: 50%;
         }
 
+
         .hero-content {
             position: relative;
+
             z-index: 2;
 
             width: min(1000px, 100%);
         }
 
+
         .hero-status {
             display: inline-flex;
+
             align-items: center;
+
             gap: 9px;
 
             padding: 8px 15px;
 
             border: 1px solid rgba(224,182,91,.20);
+
             border-radius: 999px;
 
             background: rgba(224,182,91,.045);
@@ -417,12 +483,14 @@
             color: var(--gold-light);
 
             font-size: 10px;
+
             font-weight: 900;
 
             letter-spacing: 3px;
 
             margin-bottom: 27px;
         }
+
 
         .status-dot {
             width: 7px;
@@ -432,8 +500,28 @@
 
             background: var(--green);
 
-            box-shadow: 0 0 14px rgba(54,211,153,.9);
+            box-shadow:
+                0 0 14px rgba(54,211,153,.9);
+
+            animation: statusPulse 2s ease-in-out infinite;
         }
+
+
+        @keyframes statusPulse {
+
+            0%,
+            100% {
+                transform: scale(1);
+                opacity: .75;
+            }
+
+            50% {
+                transform: scale(1.35);
+                opacity: 1;
+            }
+
+        }
+
 
         .hero h1 {
             font-size: clamp(52px, 10vw, 118px);
@@ -449,6 +537,7 @@
             text-transform: uppercase;
         }
 
+
         .hero h1 .outline {
             color: transparent;
 
@@ -456,6 +545,7 @@
 
             text-shadow: none;
         }
+
 
         .hero-description {
             max-width: 690px;
@@ -467,6 +557,7 @@
             font-size: clamp(14px, 2vw, 18px);
         }
 
+
         .hero-actions {
             display: flex;
 
@@ -476,6 +567,7 @@
 
             gap: 12px;
         }
+
 
         .btn {
             min-width: 175px;
@@ -492,12 +584,14 @@
             text-decoration: none;
 
             font-size: 11px;
+
             font-weight: 950;
 
             letter-spacing: 1.2px;
 
             transition: .25s ease;
         }
+
 
         .btn-primary {
             background:
@@ -513,6 +607,7 @@
                 0 12px 35px rgba(224,182,91,.12);
         }
 
+
         .btn-secondary {
             border: 1px solid rgba(224,182,91,.35);
 
@@ -521,14 +616,17 @@
             color: var(--gold-light);
         }
 
+
         .btn:hover {
             transform: translateY(-3px);
         }
+
 
         .hero-bottom {
             position: absolute;
 
             bottom: 28px;
+
             left: 50%;
 
             transform: translateX(-50%);
@@ -536,9 +634,28 @@
             color: #555b62;
 
             font-size: 9px;
+
             font-weight: 800;
 
             letter-spacing: 3px;
+
+            animation: scrollHint 2s ease-in-out infinite;
+        }
+
+
+        @keyframes scrollHint {
+
+            0%,
+            100% {
+                opacity: .45;
+                transform: translate(-50%, 0);
+            }
+
+            50% {
+                opacity: 1;
+                transform: translate(-50%, -5px);
+            }
+
         }
 
 
@@ -552,6 +669,7 @@
             padding: 105px 5%;
         }
 
+
         .section-heading {
             width: min(850px, 100%);
 
@@ -560,16 +678,19 @@
             text-align: center;
         }
 
+
         .section-label {
             color: var(--gold);
 
             font-size: 10px;
+
             font-weight: 950;
 
             letter-spacing: 3px;
 
             margin-bottom: 11px;
         }
+
 
         .section-title {
             font-size: clamp(31px, 5vw, 52px);
@@ -583,15 +704,18 @@
             margin-bottom: 17px;
         }
 
+
         .section-title span {
             color: var(--gold);
         }
+
 
         .section-description {
             color: var(--muted);
 
             font-size: 14px;
         }
+
 
         .gold-line {
             width: 52px;
@@ -622,6 +746,7 @@
             gap: 18px;
         }
 
+
         .glass-card {
             background:
                 linear-gradient(
@@ -637,20 +762,24 @@
             box-shadow: var(--shadow);
         }
 
+
         .about-card {
             padding: 42px;
         }
+
 
         .card-kicker {
             color: var(--gold);
 
             font-size: 10px;
+
             font-weight: 900;
 
             letter-spacing: 2px;
 
             margin-bottom: 15px;
         }
+
 
         .about-card h3 {
             font-size: 27px;
@@ -660,6 +789,7 @@
             margin-bottom: 17px;
         }
 
+
         .about-card p {
             color: #979da4;
 
@@ -668,9 +798,11 @@
             margin-bottom: 16px;
         }
 
+
         .about-card p:last-child {
             margin-bottom: 0;
         }
+
 
         .fee-card {
             min-height: 290px;
@@ -692,6 +824,7 @@
             overflow: hidden;
         }
 
+
         .fee-card::before {
             content: "";
 
@@ -705,7 +838,26 @@
             background: rgba(224,182,91,.09);
 
             filter: blur(55px);
+
+            animation: feeGlow 4s ease-in-out infinite;
         }
+
+
+        @keyframes feeGlow {
+
+            0%,
+            100% {
+                transform: scale(.9);
+                opacity: .5;
+            }
+
+            50% {
+                transform: scale(1.1);
+                opacity: 1;
+            }
+
+        }
+
 
         .fee-label {
             position: relative;
@@ -713,12 +865,14 @@
             color: #737980;
 
             font-size: 9px;
+
             font-weight: 900;
 
             letter-spacing: 3px;
 
             margin-bottom: 10px;
         }
+
 
         .fee {
             position: relative;
@@ -734,6 +888,7 @@
             letter-spacing: -2px;
         }
 
+
         .fee small {
             font-size: 17px;
 
@@ -741,6 +896,7 @@
 
             letter-spacing: 1px;
         }
+
 
         .fee-note {
             position: relative;
@@ -759,8 +915,10 @@
 
         .stats-section {
             padding-top: 30px;
+
             padding-bottom: 100px;
         }
+
 
         .stats-grid {
             width: min(var(--max), 100%);
@@ -773,6 +931,7 @@
 
             gap: 12px;
         }
+
 
         .stat {
             position: relative;
@@ -792,6 +951,7 @@
             transition: .3s ease;
         }
 
+
         .stat::before {
             content: "";
 
@@ -810,13 +970,16 @@
             filter: blur(40px);
         }
 
+
         .stat:hover {
             transform: translateY(-5px);
 
             border-color: var(--gold-line);
 
-            box-shadow: 0 20px 45px rgba(0,0,0,.25);
+            box-shadow:
+                0 20px 45px rgba(0,0,0,.25);
         }
+
 
         .stat-icon {
             position: relative;
@@ -826,16 +989,19 @@
             margin-bottom: 8px;
         }
 
+
         .stat-label {
             position: relative;
 
             color: #666c73;
 
             font-size: 9px;
+
             font-weight: 900;
 
             letter-spacing: 2px;
         }
+
 
         .stat-value {
             position: relative;
@@ -845,12 +1011,13 @@
             color: var(--gold-light);
 
             font-size: 23px;
+
             font-weight: 1000;
         }
 
 
         /* =========================================================
-           REWARDS
+           REWARDS — PREMIUM SHOWCASE
         ========================================================= */
 
         .dark-section {
@@ -867,97 +1034,1077 @@
             border-bottom: 1px solid rgba(255,255,255,.035);
         }
 
-        .rewards-container {
-            width: min(900px, 100%);
+
+        .rewards-stage {
+            width: min(1000px, 100%);
 
             margin: auto;
 
-            border: 1px solid var(--line);
+            position: relative;
 
-            border-radius: 18px;
+            perspective: 1400px;
+        }
+
+
+        .rewards-stage::before {
+            content: "";
+
+            position: absolute;
+
+            left: 50%;
+            top: 100px;
+
+            width: 560px;
+            height: 560px;
+
+            transform: translateX(-50%);
+
+            border-radius: 50%;
+
+            background:
+                radial-gradient(
+                    circle,
+                    rgba(224,182,91,.10),
+                    transparent 67%
+                );
+
+            filter: blur(25px);
+
+            pointer-events: none;
+
+            animation:
+                rewardAmbient 5s ease-in-out infinite;
+        }
+
+
+        @keyframes rewardAmbient {
+
+            0%,
+            100% {
+                opacity: .5;
+
+                transform:
+                    translateX(-50%)
+                    scale(.9);
+            }
+
+            50% {
+                opacity: 1;
+
+                transform:
+                    translateX(-50%)
+                    scale(1.08);
+            }
+
+        }
+
+
+        /* =========================================================
+           FEATURED TOP 1
+        ========================================================= */
+
+        .featured-reward {
+            position: relative;
+
+            width: min(650px, 100%);
+
+            margin: 0 auto 30px;
+
+            padding: 2px;
+
+            border-radius: 26px;
+
+            background:
+                linear-gradient(
+                    120deg,
+                    rgba(224,182,91,.10),
+                    var(--gold-dark),
+                    var(--gold),
+                    var(--gold-light),
+                    var(--gold-dark),
+                    rgba(224,182,91,.10)
+                );
+
+            background-size: 300% 300%;
+
+            animation:
+                rewardBorderFlow 5s ease infinite,
+                featuredReveal .9s cubic-bezier(.16,1,.3,1) both;
+
+            transform-style: preserve-3d;
+
+            transition:
+                transform .15s ease;
+        }
+
+
+        @keyframes rewardBorderFlow {
+
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+
+        }
+
+
+        @keyframes featuredReveal {
+
+            from {
+                opacity: 0;
+
+                transform:
+                    translateY(45px)
+                    scale(.94);
+            }
+
+            to {
+                opacity: 1;
+
+                transform:
+                    translateY(0)
+                    scale(1);
+            }
+
+        }
+
+
+        .featured-reward-inner {
+            position: relative;
 
             overflow: hidden;
 
-            background: rgba(13,16,20,.88);
+            min-height: 360px;
 
-            box-shadow: var(--shadow);
+            display: flex;
+
+            flex-direction: column;
+
+            align-items: center;
+
+            justify-content: center;
+
+            text-align: center;
+
+            padding: 55px 30px;
+
+            border-radius: 24px;
+
+            background:
+                radial-gradient(
+                    circle at 50% 20%,
+                    rgba(224,182,91,.13),
+                    transparent 45%
+                ),
+                linear-gradient(
+                    145deg,
+                    #17130b,
+                    #0d0f12 65%,
+                    #080a0d
+                );
+
+            border: 1px solid rgba(255,255,255,.08);
+
+            box-shadow:
+                0 35px 90px rgba(0,0,0,.55),
+                inset 0 1px rgba(255,255,255,.08);
+
+            transform: translateZ(20px);
         }
 
-        .reward-head {
-            display: grid;
 
-            grid-template-columns: 1fr 180px;
+        .featured-reward-inner::before {
+            content: "";
 
-            padding: 18px 25px;
+            position: absolute;
+
+            top: -120%;
+
+            left: -45%;
+
+            width: 30%;
+
+            height: 320%;
 
             background:
                 linear-gradient(
                     90deg,
-                    rgba(224,182,91,.10),
+                    transparent,
+                    rgba(255,228,160,.14),
                     transparent
                 );
 
-            border-bottom: 1px solid var(--line);
+            transform: rotate(20deg);
 
-            color: #676e75;
+            animation:
+                rewardSweep 5.5s ease-in-out infinite;
+
+            pointer-events: none;
+        }
+
+
+        @keyframes rewardSweep {
+
+            0%,
+            52% {
+                left: -50%;
+            }
+
+            100% {
+                left: 140%;
+            }
+
+        }
+
+
+        /* Decorative orbit */
+
+        .reward-orbit {
+            position: absolute;
+
+            width: 210px;
+            height: 210px;
+
+            border: 1px solid rgba(224,182,91,.07);
+
+            border-radius: 50%;
+
+            animation:
+                orbitRotate 12s linear infinite;
+
+            pointer-events: none;
+        }
+
+
+        .reward-orbit::before {
+            content: "";
+
+            position: absolute;
+
+            width: 5px;
+            height: 5px;
+
+            top: 10px;
+            left: 50%;
+
+            border-radius: 50%;
+
+            background: var(--gold-light);
+
+            box-shadow:
+                0 0 12px rgba(224,182,91,.9);
+        }
+
+
+        @keyframes orbitRotate {
+
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+
+        }
+
+
+        /* =========================================================
+           MEDAL
+        ========================================================= */
+
+        .reward-medal {
+            position: relative;
+
+            width: 82px;
+            height: 82px;
+
+            margin-bottom: 18px;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 50%;
+
+            background:
+                radial-gradient(
+                    circle at 35% 25%,
+                    #fff0bd,
+                    var(--gold) 45%,
+                    var(--gold-dark)
+                );
+
+            color: #0b0b0a;
+
+            font-size: 36px;
+
+            box-shadow:
+                0 0 0 6px rgba(224,182,91,.055),
+                0 0 0 11px rgba(224,182,91,.025),
+                0 0 50px rgba(224,182,91,.25),
+                inset 0 2px rgba(255,255,255,.75);
+
+            animation:
+                medalFloat 3.5s ease-in-out infinite;
+
+            z-index: 2;
+        }
+
+
+        .reward-medal::before,
+        .reward-medal::after {
+            content: "";
+
+            position: absolute;
+
+            inset: -14px;
+
+            border: 1px solid rgba(224,182,91,.22);
+
+            border-radius: 50%;
+        }
+
+
+        .reward-medal::after {
+            inset: -23px;
+
+            border-color: rgba(224,182,91,.08);
+
+            animation:
+                medalRing 4s linear infinite;
+        }
+
+
+        @keyframes medalFloat {
+
+            0%,
+            100% {
+                transform:
+                    translateY(0)
+                    rotate(-2deg);
+            }
+
+            50% {
+                transform:
+                    translateY(-8px)
+                    rotate(2deg);
+            }
+
+        }
+
+
+        @keyframes medalRing {
+
+            from {
+                transform:
+                    rotate(0deg)
+                    scale(.96);
+
+                opacity: .4;
+            }
+
+            50% {
+                opacity: 1;
+            }
+
+            to {
+                transform:
+                    rotate(360deg)
+                    scale(1.04);
+
+                opacity: .4;
+            }
+
+        }
+
+
+        /* =========================================================
+           FEATURED TEXT
+        ========================================================= */
+
+        .featured-label {
+            position: relative;
+
+            color: var(--gold-light);
 
             font-size: 9px;
+
+            font-weight: 950;
+
+            letter-spacing: 4px;
+
+            margin-bottom: 8px;
+
+            z-index: 2;
+        }
+
+
+        .featured-position {
+            position: relative;
+
+            color: white;
+
+            font-size: clamp(28px, 5vw, 45px);
+
+            line-height: 1;
+
+            font-weight: 1000;
+
+            letter-spacing: -1.5px;
+
+            z-index: 2;
+        }
+
+
+        .featured-position span {
+            color: var(--gold);
+        }
+
+
+        .featured-prize {
+            position: relative;
+
+            margin-top: 12px;
+
+            color: #fff4d5;
+
+            font-size: clamp(50px, 9vw, 82px);
+
+            line-height: .95;
+
+            font-weight: 1000;
+
+            letter-spacing: -4px;
+
+            text-shadow:
+                0 0 25px rgba(224,182,91,.18),
+                0 0 70px rgba(224,182,91,.08);
+
+            z-index: 2;
+
+            animation:
+                prizePulse 3s ease-in-out infinite;
+        }
+
+
+        @keyframes prizePulse {
+
+            0%,
+            100% {
+                text-shadow:
+                    0 0 20px rgba(224,182,91,.15),
+                    0 0 55px rgba(224,182,91,.05);
+            }
+
+            50% {
+                text-shadow:
+                    0 0 32px rgba(224,182,91,.34),
+                    0 0 90px rgba(224,182,91,.13);
+            }
+
+        }
+
+
+        .featured-prize small {
+            font-size: 17px;
+
+            letter-spacing: 1px;
+
+            color: var(--gold);
+
+            vertical-align: middle;
+        }
+
+
+        .featured-subtitle {
+            position: relative;
+
+            margin-top: 14px;
+
+            color: #777d83;
+
+            font-size: 10px;
+
+            letter-spacing: 2px;
+
+            font-weight: 800;
+
+            z-index: 2;
+        }
+
+
+        /* =========================================================
+           SECONDARY REWARDS
+        ========================================================= */
+
+        .secondary-rewards {
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 12px;
+
+            margin-bottom: 14px;
+        }
+
+
+        .mini-reward {
+            position: relative;
+
+            min-height: 130px;
+
+            overflow: hidden;
+
+            padding: 23px 20px;
+
+            display: flex;
+
+            flex-direction: column;
+
+            align-items: center;
+
+            justify-content: center;
+
+            text-align: center;
+
+            border-radius: 15px;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    rgba(20,24,29,.98),
+                    rgba(9,11,14,.98)
+                );
+
+            border: 1px solid rgba(255,255,255,.065);
+
+            box-shadow:
+                0 18px 45px rgba(0,0,0,.25);
+
+            opacity: 0;
+
+            animation:
+                miniRewardReveal
+                .75s
+                cubic-bezier(.16,1,.3,1)
+                forwards;
+
+            transition:
+                transform .35s ease,
+                border-color .35s ease,
+                box-shadow .35s ease;
+        }
+
+
+        .mini-reward:nth-child(1) {
+            animation-delay: .15s;
+        }
+
+
+        .mini-reward:nth-child(2) {
+            animation-delay: .25s;
+        }
+
+
+        .mini-reward:nth-child(3) {
+            animation-delay: .35s;
+        }
+
+
+        @keyframes miniRewardReveal {
+
+            from {
+                opacity: 0;
+
+                transform:
+                    translateY(35px)
+                    scale(.94);
+            }
+
+            to {
+                opacity: 1;
+
+                transform:
+                    translateY(0)
+                    scale(1);
+            }
+
+        }
+
+
+        .mini-reward::before {
+            content: "";
+
+            position: absolute;
+
+            top: 0;
+            left: -100%;
+
+            width: 70%;
+            height: 1px;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    transparent,
+                    var(--gold-light),
+                    transparent
+                );
+
+            animation:
+                miniScan 4s ease-in-out infinite;
+        }
+
+
+        @keyframes miniScan {
+
+            0%,
+            55% {
+                left: -100%;
+            }
+
+            100% {
+                left: 140%;
+            }
+
+        }
+
+
+        .mini-reward:hover {
+            transform:
+                translateY(-7px)
+                scale(1.015);
+
+            border-color:
+                rgba(224,182,91,.28);
+
+            box-shadow:
+                0 25px 55px rgba(0,0,0,.35),
+                0 0 30px rgba(224,182,91,.045);
+        }
+
+
+        .mini-icon {
+            font-size: 22px;
+
+            margin-bottom: 7px;
+
+            filter:
+                drop-shadow(
+                    0 0 9px
+                    rgba(224,182,91,.18)
+                );
+        }
+
+
+        .mini-position {
+            color: #737a81;
+
+            font-size: 9px;
+
+            font-weight: 900;
+
+            letter-spacing: 2px;
+        }
+
+
+        .mini-amount {
+            margin-top: 3px;
+
+            color: var(--gold-light);
+
+            font-size: 20px;
+
+            font-weight: 1000;
+        }
+
+
+        /* =========================================================
+           TOP 2–11 PANEL
+        ========================================================= */
+
+        .rank-panel {
+            position: relative;
+
+            padding: 25px;
+
+            border-radius: 16px;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    rgba(18,22,27,.96),
+                    rgba(8,10,13,.98)
+                );
+
+            border: 1px solid rgba(255,255,255,.055);
+
+            overflow: hidden;
+        }
+
+
+        .rank-panel::before {
+            content: "";
+
+            position: absolute;
+
+            left: 0;
+            top: 0;
+            bottom: 0;
+
+            width: 2px;
+
+            background:
+                linear-gradient(
+                    transparent,
+                    var(--gold),
+                    transparent
+                );
+
+            opacity: .7;
+        }
+
+
+        .rank-panel-title {
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            gap: 15px;
+
+            margin-bottom: 17px;
+        }
+
+
+        .rank-panel-title span:first-child {
+            color: #737980;
+
+            font-size: 9px;
+
             font-weight: 950;
 
             letter-spacing: 2px;
         }
 
-        .reward-row {
+
+        .rank-panel-title span:last-child {
+            color: var(--gold);
+
+            font-size: 9px;
+
+            font-weight: 900;
+
+            letter-spacing: 1px;
+        }
+
+
+        .rank-grid {
             display: grid;
 
-            grid-template-columns: 1fr 180px;
+            grid-template-columns:
+                repeat(5, 1fr);
 
-            align-items: center;
-
-            padding: 16px 25px;
-
-            border-bottom: 1px solid rgba(255,255,255,.045);
-
-            transition: .2s ease;
+            gap: 8px;
         }
 
-        .reward-row:last-child {
-            border-bottom: none;
+
+        .rank-item {
+            position: relative;
+
+            padding: 13px 8px;
+
+            text-align: center;
+
+            border-radius: 9px;
+
+            background:
+                rgba(255,255,255,.025);
+
+            border: 1px solid
+                rgba(255,255,255,.045);
+
+            transition:
+                transform .25s ease,
+                background .25s ease,
+                border-color .25s ease;
+
+            overflow: hidden;
         }
 
-        .reward-row:hover {
-            background: rgba(224,182,91,.035);
-        }
 
-        .reward-rank {
-            color: #cdd1d5;
+        .rank-item::after {
+            content: "";
 
-            font-size: 13px;
-            font-weight: 750;
-        }
+            position: absolute;
 
-        .reward-amount {
-            color: var(--gold-light);
+            left: 0;
+            right: 0;
+            bottom: 0;
 
-            font-size: 14px;
-            font-weight: 950;
+            height: 1px;
 
-            text-align: right;
-        }
-
-        .first-place {
             background:
                 linear-gradient(
                     90deg,
-                    rgba(224,182,91,.07),
+                    transparent,
+                    rgba(224,182,91,.4),
                     transparent
                 );
+
+            transform: scaleX(0);
+
+            transition: .3s ease;
         }
 
-        .kill-row {
-            background: rgba(224,182,91,.045);
 
-            border-top: 1px solid rgba(224,182,91,.13);
+        .rank-item:hover {
+            transform:
+                translateY(-4px);
+
+            background:
+                rgba(224,182,91,.045);
+
+            border-color:
+                rgba(224,182,91,.20);
+        }
+
+
+        .rank-item:hover::after {
+            transform: scaleX(1);
+        }
+
+
+        .rank-number {
+            color: #a6acb1;
+
+            font-size: 11px;
+
+            font-weight: 900;
+        }
+
+
+        .rank-prize {
+            margin-top: 2px;
+
+            color: var(--gold-light);
+
+            font-size: 12px;
+
+            font-weight: 950;
+        }
+
+
+        /* =========================================================
+           KILL REWARD
+        ========================================================= */
+
+        .kill-reward {
+            position: relative;
+
+            margin-top: 14px;
+
+            min-height: 105px;
+
+            padding: 20px 24px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            gap: 20px;
+
+            overflow: hidden;
+
+            border-radius: 16px;
+
+            background:
+                radial-gradient(
+                    circle at 15% 50%,
+                    rgba(224,182,91,.10),
+                    transparent 35%
+                ),
+                linear-gradient(
+                    100deg,
+                    rgba(224,182,91,.065),
+                    rgba(14,17,21,.98)
+                );
+
+            border: 1px solid rgba(224,182,91,.20);
+
+            box-shadow:
+                0 15px 45px rgba(0,0,0,.28);
+
+            transition:
+                transform .3s ease,
+                border-color .3s ease;
+        }
+
+
+        .kill-reward:hover {
+            transform: translateY(-4px);
+
+            border-color:
+                rgba(224,182,91,.40);
+        }
+
+
+        .kill-reward::before {
+            content: "";
+
+            position: absolute;
+
+            top: 0;
+            left: -100%;
+
+            width: 55%;
+            height: 100%;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    transparent,
+                    rgba(255,228,160,.055),
+                    transparent
+                );
+
+            transform: skewX(-18deg);
+
+            animation:
+                killSweep 4.5s ease-in-out infinite;
+        }
+
+
+        @keyframes killSweep {
+
+            0%,
+            60% {
+                left: -80%;
+            }
+
+            100% {
+                left: 130%;
+            }
+
+        }
+
+
+        .kill-left {
+            display: flex;
+
+            align-items: center;
+
+            gap: 14px;
+
+            position: relative;
+
+            z-index: 2;
+        }
+
+
+        .kill-icon {
+            width: 50px;
+            height: 50px;
+
+            flex-shrink: 0;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 12px;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    rgba(224,182,91,.15),
+                    rgba(224,182,91,.035)
+                );
+
+            border: 1px solid
+                rgba(224,182,91,.20);
+
+            font-size: 23px;
+
+            box-shadow:
+                0 0 25px
+                rgba(224,182,91,.06);
+        }
+
+
+        .kill-title {
+            color: white;
+
+            font-size: 14px;
+
+            font-weight: 950;
+
+            letter-spacing: .4px;
+        }
+
+
+        .kill-description {
+            color: #686f76;
+
+            font-size: 9px;
+
+            margin-top: 2px;
+
+            letter-spacing: 1px;
+        }
+
+
+        .kill-amount {
+            position: relative;
+
+            z-index: 2;
+
+            color: var(--gold-light);
+
+            font-size: 24px;
+
+            font-weight: 1000;
+
+            white-space: nowrap;
+
+            text-shadow:
+                0 0 20px
+                rgba(224,182,91,.15);
+        }
+
+
+        /* =========================================================
+           REWARD FOOTER
+        ========================================================= */
+
+        .reward-note {
+            margin-top: 16px;
+
+            text-align: center;
+
+            color: #4f565d;
+
+            font-size: 9px;
+
+            letter-spacing: 1.2px;
+        }
+
+
+        .reward-note span {
+            color: rgba(224,182,91,.55);
         }
 
 
@@ -988,6 +2135,7 @@
             box-shadow: var(--shadow);
         }
 
+
         .payment-methods {
             display: flex;
 
@@ -999,6 +2147,7 @@
 
             margin: 20px 0;
         }
+
 
         .method {
             padding: 8px 15px;
@@ -1012,8 +2161,10 @@
             color: #c5c9cd;
 
             font-size: 11px;
+
             font-weight: 800;
         }
+
 
         .payment-number {
             display: inline-flex;
@@ -1041,6 +2192,7 @@
             letter-spacing: 1px;
         }
 
+
         .copy-btn {
             padding: 7px 10px;
 
@@ -1055,20 +2207,25 @@
             cursor: pointer;
 
             font-size: 9px;
+
             font-weight: 900;
 
             transition: .2s;
         }
 
+
         .copy-btn:hover {
-            background: rgba(224,182,91,.16);
+            background:
+                rgba(224,182,91,.16);
         }
+
 
         .payment-container p {
             color: var(--muted);
 
             font-size: 13px;
         }
+
 
         .payment-warning {
             margin-top: 15px;
@@ -1104,6 +2261,7 @@
             box-shadow: var(--shadow);
         }
 
+
         .secure-banner {
             display: flex;
 
@@ -1122,6 +2280,7 @@
             border: 1px solid rgba(224,182,91,.12);
         }
 
+
         .secure-icon {
             width: 34px;
             height: 34px;
@@ -1138,15 +2297,18 @@
             background: rgba(224,182,91,.12);
         }
 
+
         .secure-text {
             color: #989fa6;
 
             font-size: 11px;
         }
 
+
         .form-group {
             margin-bottom: 21px;
         }
+
 
         label {
             display: block;
@@ -1156,12 +2318,15 @@
             color: #d0d4d8;
 
             font-size: 11px;
+
             font-weight: 850;
         }
+
 
         .required {
             color: var(--gold);
         }
+
 
         input {
             width: 100%;
@@ -1184,16 +2349,21 @@
             transition: .2s;
         }
 
+
         input::placeholder {
             color: #4e555b;
         }
 
+
         input:focus {
-            border-color: rgba(224,182,91,.65);
+            border-color:
+                rgba(224,182,91,.65);
 
             box-shadow:
-                0 0 0 3px rgba(224,182,91,.055);
+                0 0 0 3px
+                rgba(224,182,91,.055);
         }
+
 
         input[type="file"] {
             height: auto;
@@ -1203,6 +2373,7 @@
             cursor: pointer;
         }
 
+
         .file-help {
             margin-top: 6px;
 
@@ -1210,6 +2381,7 @@
 
             font-size: 10px;
         }
+
 
         .submit-btn {
             width: 100%;
@@ -1230,6 +2402,7 @@
             color: #08090a;
 
             font-size: 12px;
+
             font-weight: 1000;
 
             letter-spacing: 1px;
@@ -1237,17 +2410,21 @@
             cursor: pointer;
 
             box-shadow:
-                0 12px 35px rgba(224,182,91,.10);
+                0 12px 35px
+                rgba(224,182,91,.10);
 
             transition: .25s;
         }
+
 
         .submit-btn:hover {
             transform: translateY(-2px);
 
             box-shadow:
-                0 16px 40px rgba(224,182,91,.17);
+                0 16px 40px
+                rgba(224,182,91,.17);
         }
+
 
         .submit-btn:disabled {
             opacity: .6;
@@ -1285,6 +2462,7 @@
             box-shadow: var(--shadow);
         }
 
+
         .approval-text {
             width: min(590px, 100%);
 
@@ -1294,6 +2472,7 @@
 
             font-size: 13px;
         }
+
 
         .chat-box {
             width: min(620px, 100%);
@@ -1318,11 +2497,13 @@
                 0 0 50px rgba(224,182,91,.045);
         }
 
+
         .chat-icon {
             font-size: 29px;
 
             margin-bottom: 4px;
         }
+
 
         .chat-title {
             color: var(--gold-light);
@@ -1334,6 +2515,7 @@
             margin-bottom: 7px;
         }
 
+
         .chat-text {
             color: #9aa0a6;
 
@@ -1341,6 +2523,7 @@
 
             margin-bottom: 18px;
         }
+
 
         .chat-btn {
             display: inline-flex;
@@ -1369,9 +2552,11 @@
             transition: .25s;
         }
 
+
         .chat-btn:hover {
             transform: translateY(-2px);
         }
+
 
         .review-note {
             margin-top: 20px;
@@ -1398,6 +2583,7 @@
             gap: 10px;
         }
 
+
         .rule {
             display: flex;
 
@@ -1416,11 +2602,14 @@
             transition: .2s;
         }
 
+
         .rule:hover {
-            border-color: rgba(224,182,91,.18);
+            border-color:
+                rgba(224,182,91,.18);
 
             background: #11161b;
         }
+
 
         .rule-number {
             min-width: 27px;
@@ -1438,8 +2627,10 @@
             color: var(--gold);
 
             font-size: 9px;
+
             font-weight: 950;
         }
+
 
         .rule p {
             color: #92989f;
@@ -1464,6 +2655,7 @@
             text-align: center;
         }
 
+
         .footer-logo {
             display: inline-flex;
 
@@ -1478,9 +2670,11 @@
             letter-spacing: 2px;
         }
 
+
         .footer-logo span {
             color: var(--gold);
         }
+
 
         .footer-line {
             width: 45px;
@@ -1493,11 +2687,13 @@
             opacity: .6;
         }
 
+
         .footer-text {
             color: #555b61;
 
             font-size: 10px;
         }
+
 
         .copyright {
             margin-top: 17px;
@@ -1518,7 +2714,8 @@
             left: 50%;
             bottom: 25px;
 
-            transform: translate(-50%, 100px);
+            transform:
+                translate(-50%, 100px);
 
             z-index: 20000;
 
@@ -1528,7 +2725,8 @@
 
             background: #15191d;
 
-            border: 1px solid rgba(224,182,91,.35);
+            border: 1px solid
+                rgba(224,182,91,.35);
 
             color: white;
 
@@ -1541,8 +2739,10 @@
             pointer-events: none;
         }
 
+
         .toast.show {
-            transform: translate(-50%, 0);
+            transform:
+                translate(-50%, 0);
 
             opacity: 1;
         }
@@ -1558,16 +2758,25 @@
                 gap: 15px;
             }
 
+
             .nav-links a {
                 font-size: 10px;
             }
+
 
             .platform-grid {
                 grid-template-columns: 1fr;
             }
 
+
             .stats-grid {
                 grid-template-columns: repeat(2, 1fr);
+            }
+
+
+            .rank-grid {
+                grid-template-columns:
+                    repeat(5, 1fr);
             }
 
         }
@@ -1581,6 +2790,7 @@
                 padding: 0 5%;
             }
 
+
             .brand-logo {
                 width: 38px;
                 height: 38px;
@@ -1588,13 +2798,16 @@
                 font-size: 18px;
             }
 
+
             .brand-name {
                 font-size: 15px;
             }
 
+
             .menu-btn {
                 display: block;
             }
+
 
             .nav-links {
                 position: absolute;
@@ -1614,26 +2827,34 @@
 
                 padding: 10px 5% 16px;
 
-                background: rgba(5,6,8,.98);
+                background:
+                    rgba(5,6,8,.98);
 
-                border-bottom: 1px solid var(--line);
+                border-bottom:
+                    1px solid var(--line);
             }
+
 
             .nav-links.active {
                 display: flex;
             }
+
 
             .nav-links a {
                 padding: 13px 5px;
 
                 font-size: 11px;
 
-                border-bottom: 1px solid rgba(255,255,255,.035);
+                border-bottom:
+                    1px solid
+                    rgba(255,255,255,.035);
             }
+
 
             .nav-links a::after {
                 display: none;
             }
+
 
             .nav-register {
                 margin-top: 8px;
@@ -1641,80 +2862,218 @@
                 text-align: center;
             }
 
+
             .hero {
                 min-height: 650px;
 
                 padding: 70px 18px;
             }
 
+
             .hero h1 {
                 letter-spacing: -3px;
             }
+
 
             .hero::before {
                 width: 430px;
                 height: 430px;
             }
 
+
             section {
                 padding: 75px 5%;
             }
+
 
             .section-heading {
                 margin-bottom: 38px;
             }
 
+
             .about-card {
                 padding: 27px 23px;
             }
+
 
             .fee-card {
                 min-height: 245px;
             }
 
+
             .stats-grid {
-                grid-template-columns: 1fr 1fr;
+                grid-template-columns:
+                    1fr 1fr;
 
                 gap: 9px;
             }
+
 
             .stat {
                 padding: 22px 8px;
             }
 
+
             .stat-value {
                 font-size: 18px;
             }
 
-            .rewards-container {
-                border-radius: 13px;
+
+            /* Rewards mobile */
+
+            .rewards-stage::before {
+                width: 350px;
+                height: 350px;
             }
 
-            .reward-head,
-            .reward-row {
-                grid-template-columns: 1fr 115px;
 
-                padding-left: 15px;
-                padding-right: 15px;
+            .featured-reward {
+                border-radius: 20px;
             }
 
-            .reward-rank {
-                font-size: 11px;
+
+            .featured-reward-inner {
+                min-height: 320px;
+
+                padding:
+                    45px 20px;
+
+                border-radius: 18px;
             }
 
-            .reward-amount {
+
+            .reward-orbit {
+                width: 165px;
+                height: 165px;
+            }
+
+
+            .reward-medal {
+                width: 68px;
+                height: 68px;
+
+                font-size: 29px;
+            }
+
+
+            .featured-prize {
+                letter-spacing: -3px;
+            }
+
+
+            .featured-prize small {
+                font-size: 14px;
+            }
+
+
+            .secondary-rewards {
+                grid-template-columns:
+                    repeat(3, 1fr);
+
+                gap: 7px;
+            }
+
+
+            .mini-reward {
+                min-height: 105px;
+
+                padding: 15px 7px;
+            }
+
+
+            .mini-icon {
+                font-size: 18px;
+            }
+
+
+            .mini-position {
+                font-size: 7px;
+
+                letter-spacing: 1px;
+            }
+
+
+            .mini-amount {
+                font-size: 16px;
+            }
+
+
+            .rank-panel {
+                padding: 18px 12px;
+            }
+
+
+            .rank-grid {
+                grid-template-columns:
+                    repeat(5, 1fr);
+
+                gap: 5px;
+            }
+
+
+            .rank-item {
+                padding: 11px 3px;
+            }
+
+
+            .rank-number {
+                font-size: 9px;
+            }
+
+
+            .rank-prize {
+                font-size: 10px;
+            }
+
+
+            .kill-reward {
+                padding:
+                    17px 15px;
+
+                min-height: 90px;
+            }
+
+
+            .kill-icon {
+                width: 42px;
+                height: 42px;
+
+                font-size: 20px;
+            }
+
+
+            .kill-title {
                 font-size: 12px;
             }
+
+
+            .kill-description {
+                font-size: 8px;
+            }
+
+
+            .kill-amount {
+                font-size: 19px;
+            }
+
+
+            .reward-note {
+                font-size: 8px;
+            }
+
 
             .payment-container,
             .form-container,
             .approval-container {
-                padding: 27px 20px;
+                padding:
+                    27px 20px;
             }
+
 
             .payment-number {
                 font-size: 18px;
             }
+
 
             .rules-grid {
                 grid-template-columns: 1fr;
@@ -1727,27 +3086,71 @@
 
             .brand-name {
                 font-size: 13px;
+
                 letter-spacing: 1.5px;
             }
+
 
             .hero h1 {
                 font-size: 48px;
             }
 
+
             .hero-actions {
                 flex-direction: column;
             }
+
 
             .btn {
                 width: 100%;
             }
 
+
             .stats-grid {
                 grid-template-columns: 1fr;
             }
 
+
             .fee {
                 font-size: 52px;
+            }
+
+
+            .secondary-rewards {
+                grid-template-columns: 1fr;
+            }
+
+
+            .mini-reward {
+                min-height: 80px;
+            }
+
+
+            .kill-reward {
+                align-items: flex-start;
+            }
+
+
+            .kill-amount {
+                font-size: 17px;
+            }
+
+        }
+
+
+        /* =========================================================
+           REDUCED MOTION
+        ========================================================= */
+
+        @media (prefers-reduced-motion: reduce) {
+
+            *,
+            *::before,
+            *::after {
+                animation-duration: .01ms !important;
+                animation-iteration-count: 1 !important;
+                scroll-behavior: auto !important;
+                transition-duration: .01ms !important;
             }
 
         }
@@ -1789,11 +3192,26 @@
 
         <div class="nav-links" id="navLinks">
 
-            <a href="#scrims" onclick="closeMenu()">SCRIMS</a>
+            <a
+                href="#scrims"
+                onclick="closeMenu()"
+            >
+                SCRIMS
+            </a>
 
-            <a href="#rewards" onclick="closeMenu()">REWARDS</a>
+            <a
+                href="#rewards"
+                onclick="closeMenu()"
+            >
+                REWARDS
+            </a>
 
-            <a href="#payment" onclick="closeMenu()">PAYMENT</a>
+            <a
+                href="#payment"
+                onclick="closeMenu()"
+            >
+                PAYMENT
+            </a>
 
             <a
                 href="#register"
@@ -1803,9 +3221,19 @@
                 REGISTER
             </a>
 
-            <a href="#approval" onclick="closeMenu()">APPROVAL</a>
+            <a
+                href="#approval"
+                onclick="closeMenu()"
+            >
+                APPROVAL
+            </a>
 
-            <a href="#rules" onclick="closeMenu()">RULES</a>
+            <a
+                href="#rules"
+                onclick="closeMenu()"
+            >
+                RULES
+            </a>
 
         </div>
 
@@ -2059,10 +3487,13 @@
 
 
     <!-- =========================================================
-         REWARDS
+         PREMIUM REWARDS
     ========================================================== -->
 
-    <section id="rewards" class="dark-section">
+    <section
+        id="rewards"
+        class="dark-section"
+    >
 
         <div class="section-heading">
 
@@ -2076,182 +3507,329 @@
 
             <p class="section-description">
 
-                Rewards are based on the published
-                MOBI ESPORTS prize structure.
+                Every placement matters.
+                Every elimination counts.
 
             </p>
+
+            <div class="gold-line"></div>
 
         </div>
 
 
-        <div class="rewards-container">
+        <div class="rewards-stage">
 
 
-            <div class="reward-head">
+            <!-- =================================================
+                 FEATURED TOP 1
+            ================================================== -->
 
-                <span>
-                    POSITION
-                </span>
+            <div
+                class="featured-reward"
+                id="featuredReward"
+            >
 
-                <span style="text-align:right;">
-                    REWARD
-                </span>
+                <div class="featured-reward-inner">
 
-            </div>
-
-
-            <div class="reward-row first-place">
-
-                <span class="reward-rank">
-                    🏆 Top 1
-                </span>
-
-                <span class="reward-amount">
-                    PKR 2,500
-                </span>
-
-            </div>
+                    <div class="reward-orbit"></div>
 
 
-            <div class="reward-row">
-
-                <span class="reward-rank">
-                    🥈 Top 2
-                </span>
-
-                <span class="reward-amount">
-                    PKR 100
-                </span>
-
-            </div>
+                    <div class="reward-medal">
+                        🏆
+                    </div>
 
 
-            <div class="reward-row">
+                    <div class="featured-label">
+                        CHAMPION REWARD
+                    </div>
 
-                <span class="reward-rank">
-                    🥉 Top 3
-                </span>
 
-                <span class="reward-amount">
-                    PKR 100
-                </span>
+                    <div class="featured-position">
+
+                        TOP <span>1</span>
+
+                    </div>
+
+
+                    <div class="featured-prize">
+
+                        PKR 2,500
+
+                    </div>
+
+
+                    <div class="featured-subtitle">
+
+                        CLAIM THE TOP POSITION
+
+                    </div>
+
+                </div>
 
             </div>
 
 
-            <div class="reward-row">
+            <!-- =================================================
+                 QUICK PRIZE CARDS
+            ================================================== -->
 
-                <span class="reward-rank">
-                    Top 4
-                </span>
+            <div class="secondary-rewards">
 
-                <span class="reward-amount">
-                    PKR 100
-                </span>
+
+                <div class="mini-reward">
+
+                    <div class="mini-icon">
+                        🥈
+                    </div>
+
+                    <div class="mini-position">
+                        TOP 2
+                    </div>
+
+                    <div class="mini-amount">
+                        PKR 100
+                    </div>
+
+                </div>
+
+
+                <div class="mini-reward">
+
+                    <div class="mini-icon">
+                        🥉
+                    </div>
+
+                    <div class="mini-position">
+                        TOP 3
+                    </div>
+
+                    <div class="mini-amount">
+                        PKR 100
+                    </div>
+
+                </div>
+
+
+                <div class="mini-reward">
+
+                    <div class="mini-icon">
+                        🎯
+                    </div>
+
+                    <div class="mini-position">
+                        TOP 4–11
+                    </div>
+
+                    <div class="mini-amount">
+                        PKR 100
+                    </div>
+
+                </div>
+
 
             </div>
 
 
-            <div class="reward-row">
+            <!-- =================================================
+                 TOP 2–11
+            ================================================== -->
 
-                <span class="reward-rank">
-                    Top 5
-                </span>
+            <div class="rank-panel">
 
-                <span class="reward-amount">
-                    PKR 100
-                </span>
+
+                <div class="rank-panel-title">
+
+                    <span>
+                        PLACEMENT REWARDS
+                    </span>
+
+                    <span>
+                        TOP 2 — 11
+                    </span>
+
+                </div>
+
+
+                <div class="rank-grid">
+
+
+                    <div class="rank-item">
+
+                        <div class="rank-number">
+                            TOP 2
+                        </div>
+
+                        <div class="rank-prize">
+                            PKR 100
+                        </div>
+
+                    </div>
+
+
+                    <div class="rank-item">
+
+                        <div class="rank-number">
+                            TOP 3
+                        </div>
+
+                        <div class="rank-prize">
+                            PKR 100
+                        </div>
+
+                    </div>
+
+
+                    <div class="rank-item">
+
+                        <div class="rank-number">
+                            TOP 4
+                        </div>
+
+                        <div class="rank-prize">
+                            PKR 100
+                        </div>
+
+                    </div>
+
+
+                    <div class="rank-item">
+
+                        <div class="rank-number">
+                            TOP 5
+                        </div>
+
+                        <div class="rank-prize">
+                            PKR 100
+                        </div>
+
+                    </div>
+
+
+                    <div class="rank-item">
+
+                        <div class="rank-number">
+                            TOP 6
+                        </div>
+
+                        <div class="rank-prize">
+                            PKR 100
+                        </div>
+
+                    </div>
+
+
+                    <div class="rank-item">
+
+                        <div class="rank-number">
+                            TOP 7
+                        </div>
+
+                        <div class="rank-prize">
+                            PKR 100
+                        </div>
+
+                    </div>
+
+
+                    <div class="rank-item">
+
+                        <div class="rank-number">
+                            TOP 8
+                        </div>
+
+                        <div class="rank-prize">
+                            PKR 100
+                        </div>
+
+                    </div>
+
+
+                    <div class="rank-item">
+
+                        <div class="rank-number">
+                            TOP 9
+                        </div>
+
+                        <div class="rank-prize">
+                            PKR 100
+                        </div>
+
+                    </div>
+
+
+                    <div class="rank-item">
+
+                        <div class="rank-number">
+                            TOP 10
+                        </div>
+
+                        <div class="rank-prize">
+                            PKR 100
+                        </div>
+
+                    </div>
+
+
+                    <div class="rank-item">
+
+                        <div class="rank-number">
+                            TOP 11
+                        </div>
+
+                        <div class="rank-prize">
+                            PKR 100
+                        </div>
+
+                    </div>
+
+
+                </div>
 
             </div>
 
 
-            <div class="reward-row">
+            <!-- =================================================
+                 KILL REWARD
+            ================================================== -->
 
-                <span class="reward-rank">
-                    Top 6
-                </span>
+            <div class="kill-reward">
 
-                <span class="reward-amount">
-                    PKR 100
-                </span>
+
+                <div class="kill-left">
+
+                    <div class="kill-icon">
+                        💀
+                    </div>
+
+
+                    <div>
+
+                        <div class="kill-title">
+                            ELIMINATION REWARD
+                        </div>
+
+                        <div class="kill-description">
+                            EARN FOR EVERY CONFIRMED KILL
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="kill-amount">
+                    PKR 50 / KILL
+                </div>
+
 
             </div>
 
 
-            <div class="reward-row">
+            <div class="reward-note">
 
-                <span class="reward-rank">
-                    Top 7
-                </span>
-
-                <span class="reward-amount">
-                    PKR 100
-                </span>
-
-            </div>
-
-
-            <div class="reward-row">
-
-                <span class="reward-rank">
-                    Top 8
-                </span>
-
-                <span class="reward-amount">
-                    PKR 100
-                </span>
-
-            </div>
-
-
-            <div class="reward-row">
-
-                <span class="reward-rank">
-                    Top 9
-                </span>
-
-                <span class="reward-amount">
-                    PKR 100
-                </span>
-
-            </div>
-
-
-            <div class="reward-row">
-
-                <span class="reward-rank">
-                    Top 10
-                </span>
-
-                <span class="reward-amount">
-                    PKR 100
-                </span>
-
-            </div>
-
-
-            <div class="reward-row">
-
-                <span class="reward-rank">
-                    Top 11
-                </span>
-
-                <span class="reward-amount">
-                    PKR 100
-                </span>
-
-            </div>
-
-
-            <div class="reward-row kill-row">
-
-                <span class="reward-rank">
-                    💀 Per Kill
-                </span>
-
-                <span class="reward-amount">
-                    PKR 50
-                </span>
+                <span>◆</span>
+                Published MOBI ESPORTS prize structure
+                <span>◆</span>
 
             </div>
 
@@ -2360,7 +3938,10 @@
          REGISTRATION
     ========================================================== -->
 
-    <section id="register" class="dark-section">
+    <section
+        id="register"
+        class="dark-section"
+    >
 
         <div class="section-heading">
 
@@ -2400,7 +3981,9 @@
             </div>
 
 
-            <form onsubmit="submitRegistration(event)">
+            <form
+                onsubmit="submitRegistration(event)"
+            >
 
 
                 <div class="form-group">
@@ -2586,7 +4169,10 @@
          RULES
     ========================================================== -->
 
-    <section id="rules" class="dark-section">
+    <section
+        id="rules"
+        class="dark-section"
+    >
 
         <div class="section-heading">
 
@@ -2774,6 +4360,7 @@
         const SUPABASE_URL =
             "https://awdzejrpxxvmbnybkwnp.supabase.co";
 
+
         const SUPABASE_KEY =
             "sb_publishable_OhGEakXHJYz7weGFS7ljTg_iPAHYasR";
 
@@ -2846,15 +4433,153 @@
 
                 .then(function() {
 
-                    showToast("Payment number copied.");
+                    showToast(
+                        "Payment number copied."
+                    );
 
                 })
 
                 .catch(function() {
 
-                    showToast("Unable to copy number.");
+                    showToast(
+                        "Unable to copy number."
+                    );
 
                 });
+
+        }
+
+
+        /* =========================================================
+           PREMIUM REWARD 3D EFFECT
+        ========================================================= */
+
+        const featuredReward =
+            document.getElementById(
+                "featuredReward"
+            );
+
+
+        if (
+            featuredReward &&
+            window.matchMedia(
+                "(pointer:fine)"
+            ).matches &&
+            !window.matchMedia(
+                "(prefers-reduced-motion: reduce)"
+            ).matches
+        ) {
+
+            featuredReward.addEventListener(
+                "mousemove",
+                function(event) {
+
+                    const rect =
+                        featuredReward.getBoundingClientRect();
+
+
+                    const x =
+                        event.clientX -
+                        rect.left;
+
+
+                    const y =
+                        event.clientY -
+                        rect.top;
+
+
+                    const centerX =
+                        rect.width / 2;
+
+
+                    const centerY =
+                        rect.height / 2;
+
+
+                    const rotateY =
+                        ((x - centerX) /
+                            centerX) * 5;
+
+
+                    const rotateX =
+                        ((centerY - y) /
+                            centerY) * 4;
+
+
+                    featuredReward.style.transform =
+                        `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+                }
+            );
+
+
+            featuredReward.addEventListener(
+                "mouseleave",
+                function() {
+
+                    featuredReward.style.transform =
+                        "rotateX(0deg) rotateY(0deg)";
+
+                }
+            );
+
+        }
+
+
+        /* =========================================================
+           REWARD SCROLL REVEAL
+        ========================================================= */
+
+        const rewardItems =
+            document.querySelectorAll(
+                ".mini-reward, .rank-panel, .kill-reward"
+            );
+
+
+        if (
+            "IntersectionObserver" in window &&
+            !window.matchMedia(
+                "(prefers-reduced-motion: reduce)"
+            ).matches
+        ) {
+
+            const rewardObserver =
+                new IntersectionObserver(
+                    function(entries) {
+
+                        entries.forEach(
+                            function(entry) {
+
+                                if (
+                                    entry.isIntersecting
+                                ) {
+
+                                    entry.target.classList.add(
+                                        "reward-visible"
+                                    );
+
+                                    rewardObserver.unobserve(
+                                        entry.target
+                                    );
+
+                                }
+
+                            }
+                        );
+
+                    },
+                    {
+                        threshold: .12
+                    }
+                );
+
+
+            rewardItems.forEach(
+                function(item) {
+
+                    rewardObserver.observe(item);
+
+                }
+            );
 
         }
 
@@ -2897,7 +4622,9 @@
 
             const screenshotFile =
                 document
-                    .getElementById("paymentScreenshot")
+                    .getElementById(
+                        "paymentScreenshot"
+                    )
                     .files[0];
 
 
@@ -2918,7 +4645,9 @@
 
 
             if (
-                !screenshotFile.type.startsWith("image/")
+                !screenshotFile.type.startsWith(
+                    "image/"
+                )
             ) {
 
                 alert(
@@ -2973,7 +4702,9 @@
 
                     .storage
 
-                    .from("Payment_Screenshot")
+                    .from(
+                        "Payment_Screenshot"
+                    )
 
                     .upload(
                         filePath,
@@ -2983,13 +4714,16 @@
 
                 if (uploadError) {
 
-                    console.error(uploadError);
+                    console.error(
+                        uploadError
+                    );
 
                     alert(
                         "Payment screenshot upload failed. Please try again."
                     );
 
-                    submitButton.disabled = false;
+                    submitButton.disabled =
+                        false;
 
                     submitButton.textContent =
                         "SUBMIT REGISTRATION";
@@ -3008,7 +4742,9 @@
                     error: databaseError
                 } = await supabaseClient
 
-                    .from("registrations")
+                    .from(
+                        "registrations"
+                    )
 
                     .insert({
 
@@ -3032,14 +4768,18 @@
 
                 if (databaseError) {
 
-                    console.error(databaseError);
+                    console.error(
+                        databaseError
+                    );
 
 
                     await supabaseClient
 
                         .storage
 
-                        .from("Payment_Screenshot")
+                        .from(
+                            "Payment_Screenshot"
+                        )
 
                         .remove([
                             filePath
@@ -3082,13 +4822,15 @@
 
 
                 document
-                    .getElementById("approval")
+                    .getElementById(
+                        "approval"
+                    )
                     .scrollIntoView({
                         behavior: "smooth"
                     });
 
-
             }
+
 
             catch (error) {
 
@@ -3123,6 +4865,7 @@
         var Tawk_API =
             Tawk_API || {};
 
+
         var Tawk_LoadStart =
             new Date();
 
@@ -3130,10 +4873,15 @@
         (function() {
 
             var s1 =
-                document.createElement("script");
+                document.createElement(
+                    "script"
+                );
+
 
             var s0 =
-                document.getElementsByTagName("script")[0];
+                document.getElementsByTagName(
+                    "script"
+                )[0];
 
 
             s1.async = true;
@@ -3165,4 +4913,3 @@
 
 </body>
 </html>
-```
